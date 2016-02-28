@@ -1,0 +1,8 @@
+.navbar-container,
+.body-container{
+  @include container-fixed();
+}
+
+.title-row{
+  @include make-row();
+}

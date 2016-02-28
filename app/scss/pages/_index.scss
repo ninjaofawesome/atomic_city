@@ -1,0 +1,30 @@
+.navbar-components{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index:10;
+  background: $white;
+}
+
+.title-row{
+  @include make-row();
+}
+
+.title-container{
+  @include make-md-column(10);
+  @include make-md-column-offset(1);
+  text-align: center;
+}
+
+@media #{$md-only} {
+
+
+}
+@media #{$sm-only} {
+
+
+}
+
+
