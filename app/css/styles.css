@@ -3299,6 +3299,42 @@ body {
 .page-title {
   text-transform: uppercase; }
 
+.brand-identity,
+.social-media {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  list-style: none;
+  display: inline;
+  padding: 0;
+  margin: 0; }
+  @media (min-width: 992px) {
+    .brand-identity,
+    .social-media {
+      float: left;
+      width: 16.66667%; } }
+
+@media (min-width: 992px) {
+  .social-media {
+    margin-left: 50%; } }
+
+.brand-item,
+.social-item {
+  padding: 5px;
+  display: inline; }
+
+.brand-nav,
+.social-item {
+  color: #141414; }
+  .brand-nav:hover, .brand-nav:active, .brand-nav:focus, .brand-nav:visited,
+  .social-item:hover,
+  .social-item:active,
+  .social-item:focus,
+  .social-item:visited {
+    color: #141414;
+    text-decoration: none; }
+
 .navbar-components {
   position: fixed;
   top: 0;
@@ -3306,7 +3342,7 @@ body {
   width: 100%;
   height: 60px;
   z-index: 10;
-  color: #fff; }
+  background: #fff; }
 
 .title-row {
   margin-left: -15px;
