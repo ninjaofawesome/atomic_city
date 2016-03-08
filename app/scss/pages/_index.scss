@@ -1,3 +1,7 @@
+.body-container{
+  margin-top: 60px;
+}
+
 .navbar-components{
   position: fixed;
   top: 0;
@@ -8,14 +12,29 @@
   background: $white;
 }
 
-.title-row{
+.title-row,
+.intro-row{
   @include make-row();
 }
 
-.title-container{
+.title-container,
+.intro-container{
   @include make-md-column(10);
   @include make-md-column-offset(1);
+  @include make-xs-column(10);
+  @include make-xs-column-offset(1);
+}
+
+.title-container{
   text-align: center;
+}
+
+.divider {
+  @include make-md-column(2);
+  @include make-md-column-offset(5);
+  height: 2px;
+  background: $black;
+  margin: 5% 0;
 }
 
 @media #{$md-only} {

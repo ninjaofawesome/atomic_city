@@ -5,6 +5,34 @@ body{
   font-weight: 300;
 }
 
-.page-title{
+a {
+  @include link-transition(750ms);
+  color: $black;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: opacity(0.5);
+  }
+  &:visited {
+    color: $black;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+.page-title,
+.page-subtitle{
   text-transform: uppercase;
 }
+.page-title{
+  color: $black;
+  font-size: 12vw;
+}
+
+.page-subtitle{
+  color: $red;
+  font-size: 8vw;
+
+}
+

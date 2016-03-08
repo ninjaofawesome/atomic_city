@@ -3296,8 +3296,33 @@ body {
   font-variant: normal;
   font-weight: 300; }
 
-.page-title {
+a {
+  -webkit-transition: all 750ms ease;
+  -moz-transition: all 750ms ease;
+  -ms-transition: all 750ms ease;
+  -o-transition: all 750ms ease;
+  transition: all 750ms ease;
+  color: #141414; }
+  a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: opacity(0.5); }
+  a:visited {
+    color: #141414; }
+
+p {
+  text-align: justify; }
+
+.page-title,
+.page-subtitle {
   text-transform: uppercase; }
+
+.page-title {
+  color: #141414;
+  font-size: 12vw; }
+
+.page-subtitle {
+  color: #ed1c24;
+  font-size: 8vw; }
 
 .brand-identity,
 .social-media {
@@ -3317,7 +3342,7 @@ body {
 
 @media (min-width: 992px) {
   .social-media {
-    margin-left: 50%; } }
+    margin-left: 66.66667%; } }
 
 .brand-item,
 .social-item {
@@ -3335,6 +3360,9 @@ body {
     color: #141414;
     text-decoration: none; }
 
+.body-container {
+  margin-top: 60px; }
+
 .navbar-components {
   position: fixed;
   top: 0;
@@ -3344,25 +3372,57 @@ body {
   z-index: 10;
   background: #fff; }
 
-.title-row {
+.title-row,
+.intro-row {
   margin-left: -15px;
   margin-right: -15px; }
-  .title-row:before, .title-row:after {
+  .title-row:before, .title-row:after,
+  .intro-row:before,
+  .intro-row:after {
     content: " ";
     display: table; }
-  .title-row:after {
+  .title-row:after,
+  .intro-row:after {
     clear: both; }
 
-.title-container {
+.title-container,
+.intro-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  text-align: center; }
+  position: relative;
+  float: left;
+  width: 83.33333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 8.33333%; }
   @media (min-width: 992px) {
-    .title-container {
+    .title-container,
+    .intro-container {
       float: left;
       width: 83.33333%; } }
   @media (min-width: 992px) {
-    .title-container {
+    .title-container,
+    .intro-container {
       margin-left: 8.33333%; } }
+
+.title-container {
+  text-align: center; }
+
+.divider {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 2px;
+  background: #141414;
+  margin: 5% 0; }
+  @media (min-width: 992px) {
+    .divider {
+      float: left;
+      width: 16.66667%; } }
+  @media (min-width: 992px) {
+    .divider {
+      margin-left: 41.66667%; } }
