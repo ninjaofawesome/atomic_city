@@ -5,3 +5,21 @@
   -o-transition: all $time ease;
   transition: all $time ease;
 }
+
+@mixin rotate($deg){
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin scale($deg){
+  -webkit-transform: scale($deg);
+  -moz-transform: scale($deg);
+  -ms-transform: scale($deg);
+  -o-transform: scale($deg);
+  transform: scale($deg);
+}
+
+

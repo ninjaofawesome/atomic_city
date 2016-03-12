@@ -3,6 +3,8 @@
   @include container-fixed();
 }
 
-.title-row{
+.title-row,
+.intro-row,
+.feature-row{
   @include make-row();
 }

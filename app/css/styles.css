@@ -3281,20 +3281,29 @@ input[type="button"].btn-block {
   .body-container:after {
     clear: both; }
 
-.title-row {
+.title-row,
+.intro-row,
+.feature-row {
   margin-left: -15px;
   margin-right: -15px; }
-  .title-row:before, .title-row:after {
+  .title-row:before, .title-row:after,
+  .intro-row:before,
+  .intro-row:after,
+  .feature-row:before,
+  .feature-row:after {
     content: " ";
     display: table; }
-  .title-row:after {
+  .title-row:after,
+  .intro-row:after,
+  .feature-row:after {
     clear: both; }
 
 body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-style: normal;
   font-variant: normal;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 18px; }
 
 a {
   -webkit-transition: all 750ms ease;
@@ -3313,8 +3322,10 @@ p {
   text-align: justify; }
 
 .page-title,
-.page-subtitle {
-  text-transform: uppercase; }
+.page-subtitle,
+.feature-title {
+  text-transform: uppercase;
+  text-align: center; }
 
 .page-title {
   color: #141414;
@@ -3323,6 +3334,17 @@ p {
 .page-subtitle {
   color: #ed1c24;
   font-size: 8vw; }
+
+.intro-teaser {
+  font-size: 1.15em; }
+
+.feature-title {
+  margin: 0 0 2.5% 0; }
+
+.kf-title {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal; }
 
 .brand-identity,
 .social-media {
@@ -3372,21 +3394,9 @@ p {
   z-index: 10;
   background: #fff; }
 
-.title-row,
-.intro-row {
-  margin-left: -15px;
-  margin-right: -15px; }
-  .title-row:before, .title-row:after,
-  .intro-row:before,
-  .intro-row:after {
-    content: " ";
-    display: table; }
-  .title-row:after,
-  .intro-row:after {
-    clear: both; }
-
 .title-container,
-.intro-container {
+.intro-container,
+.feature-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -3400,16 +3410,53 @@ p {
   margin-left: 8.33333%; }
   @media (min-width: 992px) {
     .title-container,
-    .intro-container {
+    .intro-container,
+    .feature-container {
       float: left;
       width: 83.33333%; } }
   @media (min-width: 992px) {
     .title-container,
-    .intro-container {
+    .intro-container,
+    .feature-container {
       margin-left: 8.33333%; } }
 
-.title-container {
-  text-align: center; }
+.key-feature-container {
+  -webkit-transition: all 750ms ease;
+  -moz-transition: all 750ms ease;
+  -ms-transition: all 750ms ease;
+  -o-transition: all 750ms ease;
+  transition: all 750ms ease;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 300px;
+  border: 2px solid #141414;
+  line-height: 300px;
+  text-align: center;
+  margin: 5% auto; }
+  @media (min-width: 992px) {
+    .key-feature-container {
+      float: left;
+      width: 25%; } }
+  @media (min-width: 992px) {
+    .key-feature-container {
+      margin-left: 8.33333%; } }
+  .key-feature-container.left {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .key-feature-container.right {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .key-feature-container:hover, .key-feature-container:active, .key-feature-container:focus {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5); }
 
 .divider {
   position: relative;
@@ -3426,3 +3473,30 @@ p {
   @media (min-width: 992px) {
     .divider {
       margin-left: 41.66667%; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .key-feature-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; } }
+  @media (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) {
+    .key-feature-container {
+      float: left;
+      width: 83.33333%; } }
+  @media (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) {
+    .key-feature-container {
+      margin-left: 8.33333%; } }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .key-feature-container {
+    position: relative;
+    float: left;
+    width: 83.33333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 8.33333%;
+    height: 265px;
+    line-height: 265px;
+    margin: 0 0 15% 0; } }

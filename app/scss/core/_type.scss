@@ -3,6 +3,7 @@ body{
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
+  font-size: 18px;
 }
 
 a {
@@ -22,8 +23,10 @@ p {
 }
 
 .page-title,
-.page-subtitle{
+.page-subtitle,
+.feature-title{
   text-transform: uppercase;
+  text-align: center;
 }
 .page-title{
   color: $black;
@@ -33,6 +36,21 @@ p {
 .page-subtitle{
   color: $red;
   font-size: 8vw;
+
+}
+
+.intro-teaser {
+  font-size: 1.15em;
+}
+
+.feature-title {
+  margin: 0 0 2.5% 0;
+}
+
+.kf-title {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 
 }
 
