@@ -5,6 +5,17 @@
 
 .title-row,
 .intro-row,
-.feature-row{
+.feature-row,
+.walks-row,
+.purchase-row {
   @include make-row();
+}
+
+
+@media #{$md-only} {
+
+}
+
+@media #{$sm-only} {
+
 }
