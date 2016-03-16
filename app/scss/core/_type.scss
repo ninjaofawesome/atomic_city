@@ -20,6 +20,9 @@ a {
 
 p {
   text-align: justify;
+  &:first-of-type {
+    margin-top: 2%;
+  }
 }
 
 .main-title,
@@ -58,6 +61,12 @@ p {
   display: inline;
   margin: 0 2%;
 }
+
+.intro-paragraph {
+  margin-top: 2%;
+  font-size: 1.15em;
+}
+
 
 .walk-title {
   text-transform: capitalize;
