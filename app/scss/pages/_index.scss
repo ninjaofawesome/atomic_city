@@ -27,7 +27,8 @@
 }
 
 .history-list-container,
-.purchase-list-container {
+.purchase-list-container,
+.walks-list-container {
   @include make-md-column(6);
   @include make-md-column-offset(3);
   @include make-sm-column(12);

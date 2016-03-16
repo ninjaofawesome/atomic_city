@@ -3389,6 +3389,9 @@ p {
   display: inline;
   margin: 0 2%; }
 
+.walk-title {
+  text-transform: capitalize; }
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .main-title {
     font-size: 12vw; }
@@ -3519,7 +3522,8 @@ p {
       margin-left: 8.33333%; } }
 
 .history-list-container,
-.purchase-list-container {
+.purchase-list-container,
+.walks-list-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -3536,15 +3540,18 @@ p {
   padding-right: 15px; }
   @media (min-width: 992px) {
     .history-list-container,
-    .purchase-list-container {
+    .purchase-list-container,
+    .walks-list-container {
       float: left;
       width: 50%; } }
   @media (min-width: 992px) {
     .history-list-container,
-    .purchase-list-container {
+    .purchase-list-container,
+    .walks-list-container {
       margin-left: 25%; } }
   @media (min-width: 768px) {
     .history-list-container,
-    .purchase-list-container {
+    .purchase-list-container,
+    .walks-list-container {
       float: left;
       width: 100%; } }

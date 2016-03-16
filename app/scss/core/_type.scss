@@ -59,6 +59,10 @@ p {
   margin: 0 2%;
 }
 
+.walk-title {
+  text-transform: capitalize;
+}
+
 
 @media #{$md-only} {
   .main-title{
