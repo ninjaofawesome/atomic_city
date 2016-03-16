@@ -11,7 +11,7 @@ a {
   color: $black;
   &:hover, &:active, &:focus {
     text-decoration: none;
-    color: opacity(0.5);
+    color: $charcoal;
   }
   &:visited {
     color: $black;
@@ -22,46 +22,73 @@ p {
   text-align: justify;
 }
 
-.page-title,
-.page-subtitle,
-.feature-title,
-.walks-title,
-.walks-subtitle{
-  text-transform: uppercase;
+.main-title,
+.main-subtitle,
+.section-title {
   text-align: center;
 }
-.page-title{
-  color: $black;
-  font-size: 12vw;
+
+.main-title{
+  font-size: 10vw;
+  text-transform: uppercase;
 }
 
-.page-subtitle{
+.main-subtitle {
+  font-size: 7.5vw;
+  text-transform: capitalize;
   color: $red;
-  font-size: 8vw;
-
 }
 
-.intro-teaser {
-  font-size: 1.15em;
+.section-title {
+  font-size: 3.5vw;
+  text-transform: capitalize;
+  color: $charcoal;
 }
 
-.feature-title {
-  margin: 0 0 2.5% 0;
+.walk-list,
+.history-list,
+.buy-list,
+.footer-list {
+  list-style-type: none;
 }
 
-.kf-title {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
+.history-item,
+.buy-item,
+.link-item {
+  display: inline;
+  margin: 0 2%;
 }
+
 
 @media #{$md-only} {
+  .main-title{
+    font-size: 12vw;
+  }
+
+  .main-subtitle {
+    font-size: 10.5vw;
+  }
+
+  .section-title {
+    font-size: 5.5vw;
+  }
+
 
 }
 
 @media #{$sm-only} {
-  .feature-title {
-    margin: 0 0 15% 0;
+
+  .main-title{
+    font-size: 15vw;
   }
+
+  .main-subtitle {
+    font-size: 12.5vw;
+  }
+
+  .section-title {
+    font-size: 8.5vw;
+  }
+
 }
 
