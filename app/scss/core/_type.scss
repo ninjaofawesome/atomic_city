@@ -49,14 +49,10 @@ p {
 }
 
 .walk-list,
-.history-list,
-.buy-list,
 .footer-list {
   list-style-type: none;
 }
 
-.history-item,
-.buy-item,
 .link-item {
   display: inline;
   margin: 0 2%;
@@ -67,9 +63,14 @@ p {
   font-size: 1.15em;
 }
 
+.walk-title,
+.history-title {
+  text-transform: capitalize;
+  text-align: center;
+}
 
 .walk-title {
-  text-transform: capitalize;
+  color: $red;
 }
 
 

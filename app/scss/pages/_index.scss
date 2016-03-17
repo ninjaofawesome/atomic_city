@@ -26,11 +26,46 @@
   @include make-xs-column-offset(1);
 }
 
-.history-list-container,
-.purchase-list-container,
-.walks-list-container {
-  @include make-md-column(6);
-  @include make-md-column-offset(3);
-  @include make-sm-column(12);
-  @include make-xs-column(12);
+.walks-list-container,
+.purchase-container {
+  @include make-md-column(10);
+  @include make-md-column-offset(1);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+  @include make-xs-column(10);
+  @include make-xs-column-offset(1);
+}
+
+.history-list-container {
+  @include make-md-column(3);
+  @include make-md-column-offset(1);
+  @include make-sm-column(3);
+  @include make-sm-column-offset(1);
+  @include make-xs-column(3);
+  @include make-xs-column-offset(1);
+}
+
+.purchase-list-container {
+  @include make-md-column(2);
+  @include make-md-column-offset(1);
+  @include make-sm-column(2);
+  @include make-sm-column-offset(1);
+  @include make-xs-column(2);
+  @include make-xs-column-offset(1);
+}
+
+.purchase-link {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 2% auto;
+  line-height: 200px;
+  // vertical-align: middle;
+  text-align: center;
+  border: 2px solid $charcoal;
+  .purchase-title {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
 }
