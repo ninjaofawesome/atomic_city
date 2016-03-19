@@ -2,6 +2,10 @@
 .body-container{
   @include container-fixed();
 }
+.body-container{
+  margin-top: 50px;
+}
+
 
 .section-row {
   @include make-row();
@@ -11,7 +15,8 @@
 .walks-container,
 .history-container,
 .purchase-container,
-.footer-container {
+.footer-container,
+.richland-container {
   @include make-md-column(10);
   @include make-md-column-offset(1);
 }
@@ -24,11 +29,47 @@
   @include make-md-column(6);
 }
 
+.section-divider {
+  @include make-md-column(2);
+  @include make-md-column-offset(5);
+  @include make-sm-column(2);
+  @include make-sm-column-offset(5);
+  @include make-xs-column(2);
+  @include make-xs-column-offset(5);
+  height: 2px;
+  background: $black;
+  // margin: 5px 0;
+}
+
+.footer-divider {
+  @include make-md-column(12);
+  height: 10px;
+  background: $black;
+  margin: 10px 0;
+}
 
 @media #{$md-only} {
+  .title-container,
+  .walks-container,
+  .history-container,
+  .purchase-container,
+  .footer-container,
+  .richland-container {
+    @include make-sm-column(10);
+    @include make-sm-column-offset(1);
+  }
 
 }
 
 @media #{$sm-only} {
+  .title-container,
+  .walks-container,
+  .history-container,
+  .purchase-container,
+  .footer-container,
+  .richland-container {
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+  }
 
 }
