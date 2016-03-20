@@ -4,7 +4,7 @@
   @include make-md-column-offset(2);
 }
 
-// .question-answer{
-//   display: none;
-// }
+.question-title {
+  cursor: pointer;
+}
 

@@ -1,9 +1,16 @@
 .navbar-container,
-.body-container{
+.body-container,
+.faq-body-container{
   @include container-fixed();
 }
-.body-container{
+.body-container,
+.faq-body-container{
   margin-top: 50px;
+}
+
+.faq-body-container{
+  position:relative;
+  height: 90vh;
 }
 
 
@@ -16,9 +23,15 @@
 .history-container,
 .purchase-container,
 .footer-container,
+.faq-footer-container,
 .richland-container {
   @include make-md-column(10);
   @include make-md-column-offset(1);
+}
+
+.faq-footer-container{
+  position: absolute;
+  bottom: 0;
 }
 
 .description-container {
