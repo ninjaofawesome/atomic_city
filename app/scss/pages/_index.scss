@@ -28,8 +28,8 @@
 
 .walks-list-container,
 .purchase-container {
-  @include make-md-column(10);
-  @include make-md-column-offset(1);
+  @include make-md-column(8);
+  @include make-md-column-offset(2);
   @include make-sm-column(10);
   @include make-sm-column-offset(1);
   @include make-xs-column(10);
@@ -46,12 +46,12 @@
 }
 
 .purchase-list-container {
-  @include make-md-column(2);
-  @include make-md-column-offset(1);
-  @include make-sm-column(2);
-  @include make-sm-column-offset(1);
-  @include make-xs-column(2);
-  @include make-xs-column-offset(1);
+  @include make-md-column(3);
+  // @include make-md-column-offset(1);
+  @include make-sm-column(6);
+  // @include make-sm-column-offset(1);
+  @include make-xs-column(6);
+  // @include make-xs-column-offset(1);
 }
 
 .purchase-link {

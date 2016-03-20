@@ -24,7 +24,8 @@
 .purchase-container,
 .footer-container,
 .faq-footer-container,
-.richland-container {
+.richland-container,
+.intro-container {
   @include make-md-column(10);
   @include make-md-column-offset(1);
 }

@@ -3308,7 +3308,8 @@ input[type="button"].btn-block {
 .purchase-container,
 .footer-container,
 .faq-footer-container,
-.richland-container {
+.richland-container,
+.intro-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -3320,7 +3321,8 @@ input[type="button"].btn-block {
     .purchase-container,
     .footer-container,
     .faq-footer-container,
-    .richland-container {
+    .richland-container,
+    .intro-container {
       float: left;
       width: 83.33333%; } }
   @media (min-width: 992px) {
@@ -3330,7 +3332,8 @@ input[type="button"].btn-block {
     .purchase-container,
     .footer-container,
     .faq-footer-container,
-    .richland-container {
+    .richland-container,
+    .intro-container {
       margin-left: 8.33333%; } }
 
 .faq-footer-container {
@@ -3494,7 +3497,8 @@ p {
 
 .walk-list,
 .footer-list {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0; }
 
 .link-item {
   display: inline;
@@ -3680,11 +3684,11 @@ p {
     .walks-list-container,
     .purchase-container {
       float: left;
-      width: 83.33333%; } }
+      width: 66.66667%; } }
   @media (min-width: 992px) {
     .walks-list-container,
     .purchase-container {
-      margin-left: 8.33333%; } }
+      margin-left: 16.66667%; } }
   @media (min-width: 768px) {
     .walks-list-container,
     .purchase-container {
@@ -3737,25 +3741,18 @@ p {
   padding-right: 15px;
   position: relative;
   float: left;
-  width: 16.66667%;
+  width: 50%;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 8.33333%; }
+  padding-right: 15px; }
   @media (min-width: 992px) {
     .purchase-list-container {
       float: left;
-      width: 16.66667%; } }
-  @media (min-width: 992px) {
-    .purchase-list-container {
-      margin-left: 8.33333%; } }
+      width: 25%; } }
   @media (min-width: 768px) {
     .purchase-list-container {
       float: left;
-      width: 16.66667%; } }
-  @media (min-width: 768px) {
-    .purchase-list-container {
-      margin-left: 8.33333%; } }
+      width: 50%; } }
 
 .purchase-link {
   height: 200px;
