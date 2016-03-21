@@ -9,6 +9,8 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var ghPages = require('gulp-gh-pages');
+
 
 
 gulp.task('useref', function(){
@@ -71,4 +73,9 @@ gulp.task('build', function (callback) {
     ['sass', 'useref', 'images', 'fonts'],
     callback
   )
-})
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
