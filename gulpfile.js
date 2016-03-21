@@ -39,6 +39,12 @@ gulp.task('sass', function() {
     }))
 });
 
+gulp.task('css', function() {
+  return gulp.src('app/css/**/*.css') // Gets all files ending with .scss in app/scss
+    .pipe(sass())
+    .pipe(gulp.dest('dist/css'))
+});
+
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
@@ -70,7 +76,7 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+    ['css', 'useref', 'images', 'fonts'],
     callback
   )
 });
