@@ -12,3 +12,18 @@
   display: block;
   margin: 2.5% auto 0 auto;
 }
+
+@media #{$md-only} {
+  .author-photo {
+    display: block;
+    margin: 2.5% auto 0 auto;
+    width: 325px;
+  }
+}
+@media #{$sm-only} {
+  .author-photo {
+    display: block;
+    margin: 5% auto 0 auto;
+    width: 325px;
+  }
+}

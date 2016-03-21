@@ -89,6 +89,13 @@ p {
     font-size: 5.5vw;
   }
 
+  p {
+    text-align: justify;
+    &:first-of-type {
+      margin-top: 5%;
+    }
+  }
+
 
 }
 
@@ -104,6 +111,16 @@ p {
 
   .section-title {
     font-size: 8.5vw;
+  }
+
+  p {
+    text-align: justify;
+    &:first-of-type {
+      margin-top: 5%;
+      &.not-first {
+        margin-top: 0;
+      }
+    }
   }
 
 }

@@ -3419,7 +3419,6 @@ input[type="button"].btn-block {
   .purchase-container,
   .footer-container,
   .faq-footer-container,
-  .richland-container,
   .intro-container {
     position: relative;
     min-height: 1px;
@@ -3432,10 +3431,26 @@ input[type="button"].btn-block {
     .purchase-container,
     .footer-container,
     .faq-footer-container,
-    .richland-container,
     .intro-container {
       float: left;
       width: 100%; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .richland-container,
+  .faq-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; } }
+  @media (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) {
+    .richland-container,
+    .faq-container {
+      float: left;
+      width: 83.33333%; } }
+  @media (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) {
+    .richland-container,
+    .faq-container {
+      margin-left: 8.33333%; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer-small-container {
@@ -3446,13 +3461,19 @@ input[type="button"].btn-block {
   @media (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) {
     .footer-small-container {
       float: left;
-      width: 100%; } }
+      width: 50%; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer-list.left {
-    text-align: center; }
+    text-align: left; }
   .footer-list.right {
-    text-align: center; } }
+    text-align: right; }
+  .faq-body-container {
+    position: relative;
+    height: 90vh; }
+  .faq-footer-container {
+    position: absolute;
+    bottom: 0; } }
 
 @media (min-width: 0px) and (max-width: 767px) {
   .title-container,
@@ -3461,7 +3482,6 @@ input[type="button"].btn-block {
   .purchase-container,
   .footer-container,
   .faq-footer-container,
-  .richland-container,
   .intro-container {
     position: relative;
     float: left;
@@ -3469,17 +3489,33 @@ input[type="button"].btn-block {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px; }
+  .richland-container,
+  .faq-container {
+    position: relative;
+    float: left;
+    width: 83.33333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 8.33333%; }
   .footer-small-container {
     position: relative;
     float: left;
     width: 100%;
     min-height: 1px;
     padding-left: 15px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    background: orange; }
   .footer-list.left {
     text-align: center; }
   .footer-list.right {
-    text-align: center; } }
+    text-align: center; }
+  .faq-body-container {
+    position: relative;
+    height: 90vh; }
+  .faq-footer-container {
+    position: absolute;
+    bottom: 0; } }
 
 body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
@@ -3553,7 +3589,11 @@ p {
   .main-subtitle {
     font-size: 10.5vw; }
   .section-title {
-    font-size: 5.5vw; } }
+    font-size: 5.5vw; }
+  p {
+    text-align: justify; }
+    p:first-of-type {
+      margin-top: 5%; } }
 
 @media (min-width: 0px) and (max-width: 767px) {
   .main-title {
@@ -3561,7 +3601,13 @@ p {
   .main-subtitle {
     font-size: 12.5vw; }
   .section-title {
-    font-size: 8.5vw; } }
+    font-size: 8.5vw; }
+  p {
+    text-align: justify; }
+    p:first-of-type {
+      margin-top: 5%; }
+      p:first-of-type.not-first {
+        margin-top: 0; } }
 
 .navbar-components {
   position: relative;
@@ -3944,6 +3990,18 @@ p {
 .author-photo {
   display: block;
   margin: 2.5% auto 0 auto; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .author-photo {
+    display: block;
+    margin: 2.5% auto 0 auto;
+    width: 325px; } }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .author-photo {
+    display: block;
+    margin: 5% auto 0 auto;
+    width: 325px; } }
 
 .faq-container {
   position: relative;
