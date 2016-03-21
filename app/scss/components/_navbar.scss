@@ -39,3 +39,49 @@
     text-decoration: none;
   }
 }
+
+@media #{$md-only} {
+  .navbar-components{
+    @include make-sm-column(12);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $white;
+    border-bottom: 0.5px solid $charcoal;
+    z-index: 10;
+  }
+
+  .brand-identity,
+  .social-media{
+    @include make-sm-column(6);
+  }
+
+  .social-media {
+    text-align: right;
+  }
+
+}
+
+@media #{$sm-only} {
+  .navbar-components{
+    @include make-xs-column(12);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $white;
+    border-bottom: 0.5px solid $charcoal;
+    z-index: 10;
+  }
+
+  .brand-identity,
+  .social-media{
+    @include make-xs-column(6);
+  }
+
+  .social-media {
+    text-align: right;
+  }
+
+}

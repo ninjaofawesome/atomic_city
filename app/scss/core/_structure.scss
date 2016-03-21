@@ -43,6 +43,15 @@
   @include make-md-column(6);
 }
 
+.footer-list {
+  &.left{
+    text-align: left;
+  }
+  &.right{
+    text-align: right;
+  }
+}
+
 .section-divider {
   @include make-md-column(2);
   @include make-md-column-offset(5);
@@ -68,9 +77,23 @@
   .history-container,
   .purchase-container,
   .footer-container,
-  .richland-container {
-    @include make-sm-column(10);
-    @include make-sm-column-offset(1);
+  .faq-footer-container,
+  .richland-container,
+  .intro-container {
+    @include make-sm-column(12);
+  }
+
+  .footer-small-container {
+    @include make-sm-column(12);
+  }
+
+  .footer-list {
+    &.left{
+      text-align: center;
+    }
+    &.right{
+      text-align: center;
+    }
   }
 
 }
@@ -81,9 +104,24 @@
   .history-container,
   .purchase-container,
   .footer-container,
-  .richland-container {
-    @include make-xs-column(10);
-    @include make-xs-column-offset(1);
+  .faq-footer-container,
+  .richland-container,
+  .intro-container {
+    @include make-xs-column(12);
+  }
+
+
+  .footer-small-container {
+    @include make-xs-column(12);
+  }
+
+  .footer-list {
+    &.left{
+      text-align: center;
+    }
+    &.right{
+      text-align: center;
+    }
   }
 
 }

@@ -7,7 +7,6 @@
   @include make-xs-column-offset(5);
   height: 2px;
   background: $black;
-  // margin: 5px 0;
 }
 
 .footer-divider {
@@ -39,27 +38,18 @@
 .history-list-container {
   @include make-md-column(3);
   @include make-md-column-offset(1);
-  @include make-sm-column(3);
-  @include make-sm-column-offset(1);
-  @include make-xs-column(3);
-  @include make-xs-column-offset(1);
 }
 
 .purchase-list-container {
   @include make-md-column(3);
-  // @include make-md-column-offset(1);
-  @include make-sm-column(6);
-  // @include make-sm-column-offset(1);
-  @include make-xs-column(6);
-  // @include make-xs-column-offset(1);
 }
 
 .purchase-link {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   display: block;
   margin: 2% auto;
-  line-height: 200px;
+  line-height: 150px;
   // vertical-align: middle;
   text-align: center;
   border: 2px solid $charcoal;
@@ -68,4 +58,73 @@
     vertical-align: middle;
     line-height: normal;
   }
+}
+
+@media #{$md-only} {
+  .purchase-list-container {
+    @include make-sm-column(6);
+  }
+
+  .history-list-container {
+    @include make-sm-column(10);
+    @include make-sm-column-offset(1);
+  }
+
+  .section-divider {
+    @include make-sm-column(2);
+    @include make-sm-column-offset(5);
+    height: 2px;
+    background: $black;
+  }
+
+  .purchase-link {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 5% auto;
+    line-height: 150px;
+    text-align: center;
+    border: 2px solid $charcoal;
+    .purchase-title {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+    }
+  }
+
+}
+
+@media #{$sm-only} {
+  .purchase-list-container {
+    @include make-xs-column(12);
+  }
+
+  .history-list-container {
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+  }
+
+  .section-divider {
+    @include make-xs-column(2);
+    @include make-xs-column-offset(5);
+    height: 2px;
+    background: $black;
+  }
+
+  .purchase-link {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 5% auto;
+    line-height: 150px;
+    text-align: center;
+    border: 2px solid $charcoal;
+    .purchase-title {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+    }
+  }
+
+
 }
