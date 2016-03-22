@@ -13,15 +13,15 @@ var ghPages = require('gulp-gh-pages');
 
 
 
-gulp.task('innerjs', function(){
-  return gulp.src('app/html/*.html')
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist/'))
-});
+// gulp.task('innerjs', function(){
+//   return gulp.src('app/html/*.html')
+//     .pipe(useref())
+//     .pipe(gulpIf('*.js', uglify()))
+//     .pipe(gulpIf('*.css', cssnano()))
+//     .pipe(gulp.dest('dist/'))
+// });
 
-gulp.task('js', function(){
+gulp.task('compile', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
@@ -29,15 +29,6 @@ gulp.task('js', function(){
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
-
-// gulp.task('js', function(){
-//   return gulp.src('app/*.html')
-//     .pipe(useref())
-//     .pipe(gulpIf('*.js', uglify()))
-//     // Minifies only if it's a CSS file
-//     .pipe(gulpIf('../*.css', cssnano()))
-//     .pipe(gulp.dest('dist/'))
-// });
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -94,7 +85,7 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['js', 'innerjs', 'images', 'fonts'],
+    ['compile', 'images', 'fonts'],
     callback
   )
 });
