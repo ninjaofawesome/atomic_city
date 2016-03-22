@@ -13,7 +13,15 @@ var ghPages = require('gulp-gh-pages');
 
 
 
-gulp.task('useref', function(){
+gulp.task('innerjs', function(){
+  return gulp.src('app/html/*.html')
+    .pipe(useref())
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('js', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
@@ -21,6 +29,15 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
+
+// gulp.task('js', function(){
+//   return gulp.src('app/*.html')
+//     .pipe(useref())
+//     .pipe(gulpIf('*.js', uglify()))
+//     // Minifies only if it's a CSS file
+//     .pipe(gulpIf('../*.css', cssnano()))
+//     .pipe(gulp.dest('dist/'))
+// });
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -39,11 +56,12 @@ gulp.task('sass', function() {
     }))
 });
 
-gulp.task('css', function() {
-  return gulp.src('app/css/**/*.css') // Gets all files ending with .scss in app/scss
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css'))
-});
+// gulp.task('css', function() {
+//   return gulp.src('app/css/**/*.css') // Gets all files ending with .scss in app/scss
+//     .pipe(sass())
+//     .pipe(gulpIf('*.css', cssnano()))
+//     .pipe(gulp.dest('dist/css'))
+// });
 
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
@@ -76,7 +94,7 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['css', 'useref', 'images', 'fonts'],
+    ['js', 'innerjs', 'images', 'fonts'],
     callback
   )
 });
