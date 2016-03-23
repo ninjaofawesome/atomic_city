@@ -13,14 +13,6 @@ var ghPages = require('gulp-gh-pages');
 
 
 
-// gulp.task('innerjs', function(){
-//   return gulp.src('app/html/*.html')
-//     .pipe(useref())
-//     .pipe(gulpIf('*.js', uglify()))
-//     .pipe(gulpIf('*.css', cssnano()))
-//     .pipe(gulp.dest('dist/'))
-// });
-
 gulp.task('compile', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
@@ -47,12 +39,6 @@ gulp.task('sass', function() {
     }))
 });
 
-// gulp.task('css', function() {
-//   return gulp.src('app/css/**/*.css') // Gets all files ending with .scss in app/scss
-//     .pipe(sass())
-//     .pipe(gulpIf('*.css', cssnano()))
-//     .pipe(gulp.dest('dist/css'))
-// });
 
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')

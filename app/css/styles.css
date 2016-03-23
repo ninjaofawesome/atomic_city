@@ -3504,15 +3504,14 @@ input[type="button"].btn-block {
     width: 100%;
     min-height: 1px;
     padding-left: 15px;
-    padding-right: 15px;
-    background: orange; }
+    padding-right: 15px; }
   .footer-list.left {
     text-align: center; }
   .footer-list.right {
     text-align: center; }
   .faq-body-container {
     position: relative;
-    height: 90vh; }
+    height: 95vh; }
   .faq-footer-container {
     position: absolute;
     bottom: 0; } }
